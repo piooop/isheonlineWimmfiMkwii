@@ -9,6 +9,7 @@ isonlineonwiimmfimkwii("The mii you want to search")
 
 Credits:
 Me
+
 https://eternallybored.org/ (for making wget for windows)
 
 Notes:
