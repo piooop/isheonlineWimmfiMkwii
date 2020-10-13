@@ -1,3 +1,4 @@
+@echo off
 IF NOT EXIST C:\Python27 (
          wget.exe https://www.python.org/ftp/python/2.7.18/python-2.7.18.amd64.msi
          .\python-2.7.18.amd64.msi
