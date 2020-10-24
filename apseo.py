@@ -17,6 +17,7 @@ def isonlineonwiimmfimkwii(mii):
         time.sleep(86)
         file.close()
         s.close()
+        os.remove("index.html")
         exit()
  file.close()
  s.close()
