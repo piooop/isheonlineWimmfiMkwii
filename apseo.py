@@ -2,7 +2,14 @@ import mmap
 import wget
 import os
 import vlc
+import glob
 def isonlineonwiimmfimkwii(mii):
+ fileList = glob.glob('./index*')
+ for filePath in fileList:
+    try:
+        os.remove(filePath)
+    except:
+        print("Error while deleting file : ", filePath)
  url="https://wiimmfi.de/stats/mkw/index.html"
  wget.download(url)
  file=open('index.html')
