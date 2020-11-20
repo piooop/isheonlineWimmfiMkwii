@@ -20,6 +20,7 @@ IF NOT EXIST C:\Python27\p.mp3 (
          copy .\p.mp3 C:\Python27
          del .\p.mp3
          copy 3-32 Finish OK & Winning Results (Race).mp3 p.mp3
+         del 3-32 Finish OK & Winning Results (Race).mp3
 )
 REM comment_out: If you don't have the music file it downloads it and copies it to python folder and deletes the one downloaded
 C:\Python27\Scripts\pip.exe install wget
