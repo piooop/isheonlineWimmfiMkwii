@@ -3,8 +3,9 @@ import wget
 import os
 import vlc
 import glob
-import time
-def isonlineonwiimmfimkwii(mii):
+from time import time, ctime
+import time as she
+def isonlineonwiimmfimkwii(fc):
  fileList = glob.glob('./index*')
  for filePath in fileList:
     try:
@@ -16,16 +17,21 @@ def isonlineonwiimmfimkwii(mii):
  file=open('index.html')
  with file as f:
     s = mmap.mmap(f.fileno(), 0, access=mmap.ACCESS_READ)
-    if s.find(mii) != -1:
+    if s.find(fc) != -1:
         online="1"
         print " "
-        print "He is online. Join!"
+        print fc + " is online. Join!"
         player= vlc.MediaPlayer("C:\Python27\p.mp3")        
         player.play()
-        time.sleep(86)
+        she.sleep(86)
         file.close()
         s.close()
+        os.system('copy index.html "' + fc + 'Connection.html"')
         os.remove("index.html")
+        t = time()
+        f= open('./SomeoneConnected.txt', 'w+')
+        f.write(fc + ' connected at ' + str(ctime(t)))
+        f.close()
         exit()
  file.close()
  s.close()
