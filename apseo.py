@@ -5,9 +5,9 @@ import vlc
 import glob
 from time import time, ctime
 import time as she
-fileList = glob.glob('./index*')
 url="https://wiimmfi.de/stats/mkw/index.html"
 def isonlineonwiimmfimkwii(fc):
+ fileList = glob.glob('./index*')
  for filePath in fileList:
     try:
         os.remove(filePath)
