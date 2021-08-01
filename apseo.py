@@ -6,13 +6,13 @@ import glob
 from time import time, ctime
 import time as she
 fileList = glob.glob('./index*')
+url="https://wiimmfi.de/stats/mkw/index.html"
 def isonlineonwiimmfimkwii(fc):
  for filePath in fileList:
     try:
         os.remove(filePath)
     except:
         print("Error while deleting file : ", filePath)
- url="https://wiimmfi.de/stats/mkw/index.html"
  wget.download(url)
  file=open('index.html')
  with file as f:
